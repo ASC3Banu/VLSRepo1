@@ -5,10 +5,12 @@ import org.junit.jupiter.api.Test;
 
 import static junit.framework.Assert.assertEquals;
 import static org.junit.Assert.assertNotEquals;
+import static org.junit.Assert.assertNull;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class CourseTest {
+
 
     @Test
     public void testCourseConstructorAndGetters() {
@@ -20,6 +22,7 @@ public class CourseTest {
         assertEquals(10, course.getDuration());
         assertTrue(course.isAvailability());
     }
+    
 
     @Test
     public void testCourseSetters() {
@@ -43,5 +46,14 @@ public class CourseTest {
         String expected = "Course{id=3, name='DSA Stack and Queue', author='Striver', duration=20, availability=true}";
         assertEquals(expected, course.toString());
     }
+    @Test
+    public void testNotEquals() {
+        Course course1 = new Course(1, "Introduction to Java", "John Doe", 10, true);
+        Course course2 = new Course(2, "Advanced Python", "Jane Smith", 15, false);
+
+        assertFalse(course1.equals(course2));
+        assertNotEquals(course1.hashCode(), course2.hashCode());
+    }
 }
+
 

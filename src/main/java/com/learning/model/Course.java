@@ -2,10 +2,10 @@ package com.learning.model;
 
 public class Course {
     private int id;
-    private String name;
-    private String author;
+    private static String name;
+    private static String author;
     private int duration;
-    private boolean availability;
+    private static boolean availability;
 
     public Course() {}
 
@@ -26,7 +26,7 @@ public class Course {
         this.id = id;
     }
 
-    public String getName() {
+    public static String getName() {
         return name;
     }
 
@@ -34,7 +34,7 @@ public class Course {
         this.name = name;
     }
 
-    public String getAuthor() {
+    public static String getAuthor() {
         return author;
     }
 
@@ -50,7 +50,7 @@ public class Course {
         this.duration = duration;
     }
 
-    public boolean isAvailability() {
+    public static boolean isAvailability() {
         return availability;
     }
 
