@@ -147,7 +147,7 @@ import java.util.List;
 public class MenuUI {
     private final CourseService courseService;
     private final UserService userService;
-    public User loggedInUser; // Changed to public for access in App
+    public static User loggedInUser; // Changed to public for access in App
 
     public MenuUI() {
         this.courseService = new CourseServiceImpl();
@@ -238,7 +238,7 @@ public class MenuUI {
         }
     }
 
-    public void logoutUser() {
+    public static void logoutUser() {
         loggedInUser = null;
         System.out.println("User logged out successfully.");
     }
