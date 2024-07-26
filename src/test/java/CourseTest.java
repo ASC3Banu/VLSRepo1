@@ -10,8 +10,6 @@ import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class CourseTest {
-
-
     @Test
     public void testCourseConstructorAndGetters() {
         Course course = new Course(1, "Introduction to Java", "Telusko", 10, true);
