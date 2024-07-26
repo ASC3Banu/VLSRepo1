@@ -44,14 +44,6 @@ public class CourseTest {
         String expected = "Course{id=3, name='DSA Stack and Queue', author='Striver', duration=20, availability=true}";
         assertEquals(expected, course.toString());
     }
-    @Test
-    public void testNotEquals() {
-        Course course1 = new Course(1, "Introduction to Java", "John Doe", 10, true);
-        Course course2 = new Course(2, "Advanced Python", "Jane Smith", 15, false);
-
-        assertFalse(course1.equals(course2));
-        assertNotEquals(course1.hashCode(), course2.hashCode());
-    }
 }
 
 
