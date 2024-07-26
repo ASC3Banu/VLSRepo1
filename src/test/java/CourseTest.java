@@ -22,7 +22,7 @@ public class CourseTest {
         assertEquals(10, course.getDuration());
         assertTrue(course.isAvailability());
     }
-    
+
 
     @Test
     public void testCourseSetters() {
